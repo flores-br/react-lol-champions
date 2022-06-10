@@ -1,0 +1,32 @@
+.wrapper {
+  h1 {
+    strong {
+      color: #6c6c6c;
+    }
+    cursor: pointer;
+  }
+
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    margin-top: 50px;
+    input {
+      padding-left: 20px;
+      width: 30vw;
+      height: 5vh;
+      border-radius: 20px;
+      left: 20px;
+      box-shadow: none;
+      outline: none;
+      border: none;
+      transition: box-shadow 0.25s ease-in-out;
+      &:focus {
+        box-shadow: 0px 0px 10px whitesmoke;
+      }
+    }
+  }
+}
