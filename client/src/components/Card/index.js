@@ -1,10 +1,29 @@
 import './styles.css';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 
 const Card = () => {
   const imgUrl =
     'https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Rammus_0.jpg';
-  //   const imgUrl =
-  //     'https://media.istockphoto.com/vectors/black-grille-background-vector-id1151863743?k=20&m=1151863743&s=612x612&w=0&h=3AGQBp66ooh8csl-kymoKamz9trM48LryhiZ7zRCf2E=';
+
+  const [data, setData] = useState([]);
+
+  // load all data on first load
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(
+          'http://ddragon.leagueoflegends.com/cdn/12.11.1/data/en_US/champion.json'
+        );
+        setData(Object.keys(res['data']['data']));
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div className="cards">
       <div className="card" style={{ backgroundImage: `url(${imgUrl})` }}>

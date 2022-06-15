@@ -1,13 +1,7 @@
 .cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
@@ -15,55 +9,37 @@
   max-width: 30ch;
   height: 400px;
   border-radius: 0.5rem;
-  -webkit-transition: -webkit-transform 500ms ease;
-  transition: -webkit-transform 500ms ease;
   transition: transform 500ms ease;
-  transition: transform 500ms ease, -webkit-transform 500ms ease;
   overflow: hidden;
-  -webkit-box-shadow: 5px -5px 5px black;
-          box-shadow: 5px -5px 5px black;
+  box-shadow: 0px 0px 10px black;
 }
-
 .card:hover {
-  -webkit-transform: scale(1.025);
-          transform: scale(1.025);
+  transform: scale(1.025);
 }
-
 .card:hover .card-title::after {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
 }
-
 .card:hover .card-content {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  -webkit-transition-delay: 500ms;
-          transition-delay: 500ms;
+  transform: translateY(0);
+  transition-delay: 500ms;
 }
 
 .card-content {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(black));
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), black);
-  -webkit-transform: translateY(75%);
-          transform: translateY(75%);
-  -webkit-transition: -webkit-transform 0.5s ease;
-  transition: -webkit-transform 0.5s ease;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+  transform: translateY(75%);
   transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
   height: 100%;
   position: relative;
 }
 
 .card-content > *:not(.card-title, .card-subtitle) {
   opacity: 0;
-  -webkit-transition: opacity 500ms linear;
   transition: opacity 500ms linear;
 }
 
 .card:hover .card-content > *:not(.card-title, .card-subtitle) {
   opacity: 1;
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
+  transition-delay: 1s;
 }
 
 .card-title,
@@ -78,9 +54,8 @@
 .card-title {
   position: relative;
 }
-
 .card-title::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 90%;
   height: 3px;
@@ -91,14 +66,9 @@
   right: 0;
   text-align: center;
   background-color: yellowgreen;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-transition: -webkit-transform 500ms ease;
-  transition: -webkit-transform 500ms ease;
+  transform: scale(0);
+  transform-origin: center;
   transition: transform 500ms ease;
-  transition: transform 500ms ease, -webkit-transform 500ms ease;
 }
 
 .card-subtitle {
@@ -128,8 +98,6 @@
   position: absolute;
   width: 100%;
   bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 20px;
 }
@@ -138,35 +106,22 @@
   width: 33.33%;
   height: 5rem;
   background-color: rgba(0, 0, 0, 0.5);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border-right: thick double gray;
   gap: 5px;
 }
-
 .one-third.no-border {
   border-right: none;
 }
-
 .one-third .stat-name {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 13px;
 }
-
 .one-third .stat-value {
   font-weight: bold;
   font-size: 15px;
-}
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
