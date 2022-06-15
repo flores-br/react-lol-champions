@@ -6,10 +6,29 @@
   align-items: center;
 }
 .wrapper h1 {
-  cursor: pointer;
+  position: relative;
+  font-size: 3.75em;
+  color: #a67c40;
+  text-align: center;
+  text-shadow: 5px -1px black;
 }
-.wrapper h1 strong {
-  color: #6c6c6c;
+.wrapper h1 span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.5em;
+  line-height: 3em;
+  padding-bottom: 10px;
+}
+.wrapper h1::before {
+  content: "";
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  bottom: 0;
+  width: 90%;
+  height: 2px;
+  background-color: whitesmoke;
 }
 .wrapper form {
   margin-top: 50px;
