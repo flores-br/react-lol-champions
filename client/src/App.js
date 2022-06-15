@@ -3,9 +3,6 @@ import Header from './components/Header';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
-const imgUrl =
-  'https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Rammus_0.jpg';
-
 const App = () => {
   const [data, setData] = useState([]);
 
