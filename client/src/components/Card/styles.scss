@@ -57,7 +57,7 @@
 .card-title {
   position: relative;
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 90%;
     height: 3px;
@@ -69,7 +69,7 @@
     right: 0;
     text-align: center;
 
-    background-color: yellowgreen;
+    background-color: rgb(193, 255, 99);
     transform: scale(0);
     transform-origin: center;
     transition: transform 500ms ease;

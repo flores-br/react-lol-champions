@@ -2,8 +2,23 @@
 
 # dependencies
 client/node_modules
-client/.pnp
+client/.pnp.*
 client/.pnp.js
+
+client/.yarn/*
+client/!.yarn/patches
+client/!.yarn/plugins
+client/!.yarn/releases
+client/!.yarn/sdks
+client/!.yarn/versions
+
+server/.pnp.*
+server/.yarn/*
+server/!.yarn/patches
+server/!.yarn/plugins
+server/!.yarn/releases
+server/!.yarn/sdks
+server/!.yarn/versions
 
 # testing
 client/coverage
