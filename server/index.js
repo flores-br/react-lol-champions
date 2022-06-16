@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
   const { q } = req.query;
 
   const search = data => {
-    return data.filter(item => item['data']['name'].includes(q));
+    return data.filter(item => item['data']['name'].toLowerCase().includes(q));
   };
 
   q ? res.json(search(champData)) : res.json(champData);
